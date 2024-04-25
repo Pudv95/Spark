@@ -10,14 +10,13 @@ class FolderGenerator {
 
   /// Generates the required folders.
   void generate() {
-    _createSubDirectories(libDirectory, [
-      'screens',
+    createSubDirectories(libDirectory, [
+      'features',
       'models',
       'services',
       'utils',
-      'constants',
     ]);
-    _createSubDirectories(assetsDirectory, [
+    createSubDirectories(assetsDirectory, [
       'images',
       'fonts',
       'icons',
@@ -29,7 +28,7 @@ class FolderGenerator {
   /// The [parentDirectory] is the parent directory where the subdirectories will be created.
   /// The [subDirectoryNames] is a list of names for the subdirectories to be created.
 
-  void _createSubDirectories(
+  void createSubDirectories(
       String parentDirectory, List<String> subDirectoryNames) {
     subDirectoryNames.forEach((subDirectoryName) {
       final Directory subDirectory =
