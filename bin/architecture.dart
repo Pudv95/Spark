@@ -1,3 +1,4 @@
+import 'package:Spark/routing.dart';
 import 'package:args/args.dart';
 import 'package:Spark/asset_management.dart';
 import 'package:Spark/generator.dart';
@@ -11,10 +12,12 @@ void main(List<String> arguments) {
   // Add commands
   argParser.addCommand('create', argParser);
   argParser.addCommand('getAssets', argParser);
-  
+  argParser.addCommand('init_routes', argParser);
+
   // Add options
   argParser.addOption('addFeature', abbr: 'f', help: 'Add a new feature');
-  argParser.addOption('removeFeature', abbr: 'r', help: 'Removes an existing feature');
+  argParser.addOption('removeFeature',
+      abbr: 'r', help: 'Removes an existing feature');
 
   // Parse arguments
   final argResults = argParser.parse(arguments);
@@ -22,6 +25,7 @@ void main(List<String> arguments) {
   // Initialize objects
   final FolderGenerator folderGenerator = FolderGenerator();
   final AssetManagement assetManagement = AssetManagement();
+  final RoutingManagement routingManagement = RoutingManagement();
 
   // Check which command or option was provided and take appropriate actions
   if (argResults.command?.name == 'create') {
@@ -30,6 +34,9 @@ void main(List<String> arguments) {
   } else if (argResults.command?.name == 'getAssets') {
     // If 'getAssets' command was provided
     assetManagement.getAllAssets(); // Retrieve all assets
+  } else if (argResults.command?.name == 'init_routes') {
+    // If 'getAssets' command was provided
+    routingManagement.initialiseRouting(); // Retrieve all assets
   } else if (argResults['addFeature'] != null) {
     // If 'addFeature' option was provided
     final featureName = argResults['addFeature'] as String;

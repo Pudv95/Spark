@@ -39,4 +39,12 @@ class FolderGenerator {
       }
     });
   }
+
+  void createFiles(String parentDirectory, String fileNames, String content) {
+    final File file = File('$parentDirectory/$fileNames');
+    if (!file.existsSync()) {
+      file.writeAsStringSync(content);
+      print('Created file: $parentDirectory/$fileNames');
+    }
+  }
 }
