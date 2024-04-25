@@ -15,4 +15,4 @@ dev_dependencies:
   analyzer: ^6.4.1 
 
 executables:
-  spark: architecture
+  Spark: architecture

@@ -35,8 +35,8 @@ void main(List<String> arguments) {
     // If 'getAssets' command was provided
     assetManagement.getAllAssets(); // Retrieve all assets
   } else if (argResults.command?.name == 'init_routes') {
-    // If 'getAssets' command was provided
-    routingManagement.initialiseRouting(); // Retrieve all assets
+    // If 'init_routes' command was provided
+    routingManagement.initialiseRouting(); // Initialize routing
   } else if (argResults['addFeature'] != null) {
     // If 'addFeature' option was provided
     final featureName = argResults['addFeature'] as String;
@@ -49,6 +49,6 @@ void main(List<String> arguments) {
     features.removeFeature(); // Remove the specified feature
   } else {
     // If none of the expected commands or options were provided
-    print('Enter a valid command.');
+    print('This command is not recognized. Please try again.');
   }
 }

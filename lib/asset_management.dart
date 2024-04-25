@@ -38,7 +38,7 @@ class AssetManagement {
 class My$className {
   $dartCode
 }
-    ''';
+''';
 
     final Directory folderDirectory = Directory('lib/utils/const/$folderName');
     if (!folderDirectory.existsSync()) {
