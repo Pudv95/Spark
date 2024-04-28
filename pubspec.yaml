@@ -1,4 +1,4 @@
-name: Spark
+name: flutter_spark
 description: A Simple CLI to generate folder architecture for your flutter project.
 version: 1.0.0
 
@@ -15,4 +15,4 @@ dev_dependencies:
   analyzer: ^6.4.1 
 
 executables:
-  Spark: architecture
+  spark: architecture

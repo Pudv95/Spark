@@ -1,9 +1,9 @@
-import 'package:Spark/create_app.dart';
-import 'package:Spark/routing.dart';
+import 'package:flutter_spark/create_app.dart';
+import 'package:flutter_spark/routing.dart';
 import 'package:args/args.dart';
-import 'package:Spark/asset_management.dart';
-import 'package:Spark/generator.dart';
-import 'package:Spark/add_feature.dart';
+import 'package:flutter_spark/asset_management.dart';
+import 'package:flutter_spark/generator.dart';
+import 'package:flutter_spark/add_feature.dart';
 
 /// The main entry point of the application.
 void main(List<String> arguments) {
@@ -19,11 +19,6 @@ void main(List<String> arguments) {
 
   // Parse command line arguments
   final argResults = argParser.parse(arguments);
-
-  // Print parsed command, rest arguments, and options
-  print(argResults.command?.name);
-  print(argResults.command?.rest);
-  print(argResults.command?.options);
 
   // Initialize necessary classes
   final FolderGenerator folderGenerator = FolderGenerator();

@@ -7,7 +7,7 @@ class AssetManagement {
   void getAllAssets() async {
     final dir = Directory('assets');
     final List<FileSystemEntity> entities = await dir.list().toList();
-    entities.forEach((entity) async {
+    for (final entity in entities) {
       if (entity is! File &&
           path.basename(path.withoutExtension(entity.path)).toLowerCase() !=
               'fonts') {
@@ -19,7 +19,7 @@ class AssetManagement {
         }
         createManager(dire, assetNames);
       }
-    });
+    }
   }
 
   /// Creates a manager for the given directory and list of assets.

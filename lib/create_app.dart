@@ -1,6 +1,5 @@
 import 'dart:io';
-
-import 'package:Spark/generator.dart';
+import 'package:flutter_spark/generator.dart';
 
 class CreateApp {
   void createApp(String myApp) {
@@ -9,16 +8,18 @@ class CreateApp {
         FolderGenerator(
                 libDirectory: '$myApp/lib', assetsDirectory: '$myApp/assets')
             .generate();
-        updatePubspecYaml();
-        getDependencies();
+        updatePubspecYaml(myApp);
+        getDependencies(myApp);
       } else {
         print('Error creating Flutter project: ${result.stderr}');
       }
     });
   }
 
-  void getDependencies() {
-    Process.run('flutter', ['pub', 'get'], runInShell: true).then((result) {
+  void getDependencies(String appName) {
+    Process.run('cd', ['./$appName', '&&', 'flutter', 'pub', 'get'],
+            runInShell: true)
+        .then((result) {
       if (result.exitCode == 0) {
         print('Dependencies fetched successfully');
       } else {
@@ -27,10 +28,10 @@ class CreateApp {
     });
   }
 
-  void updatePubspecYaml() {
+  void updatePubspecYaml(String appName) {
     FolderGenerator.writeInFile('''  assets:
     - assets/images/
     - assets/icons/
-''', 'myapp', 'pubspec.yaml');
+''', appName, 'pubspec.yaml');
   }
 }

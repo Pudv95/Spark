@@ -30,14 +30,14 @@ class FolderGenerator {
 
   void createSubDirectories(
       String parentDirectory, List<String> subDirectoryNames) {
-    subDirectoryNames.forEach((subDirectoryName) {
+    for (var subDirectoryName in subDirectoryNames) {
       final Directory subDirectory =
           Directory('$parentDirectory/$subDirectoryName');
       if (!subDirectory.existsSync()) {
         subDirectory.createSync(recursive: true);
         print('Created folder: $parentDirectory/$subDirectoryName');
       }
-    });
+    }
   }
 
   void createFiles(String parentDirectory, String fileNames, String content) {
@@ -52,7 +52,7 @@ class FolderGenerator {
       String content, String parentDirectory, String fileNames) {
     final File file = File('$parentDirectory/$fileNames');
     if (file.existsSync()) {
-      file.writeAsStringSync(content,mode: FileMode.writeOnlyAppend);
+      file.writeAsStringSync(content, mode: FileMode.writeOnlyAppend);
       print('Updated file: $parentDirectory/$fileNames');
     } else {
       print('File not found: $parentDirectory/$fileNames');

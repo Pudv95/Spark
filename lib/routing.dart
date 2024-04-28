@@ -1,4 +1,4 @@
-import 'package:Spark/generator.dart';
+import 'package:flutter_spark/generator.dart';
 
 class RoutingManagement extends FolderGenerator {
   void initialiseRouting() {

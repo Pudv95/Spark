@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:Spark/generator.dart';
+import 'package:flutter_spark/generator.dart';
 
 /// A class that represents a feature in the application.
 class Features extends FolderGenerator {
@@ -16,7 +16,7 @@ class Features extends FolderGenerator {
   }
 
   void removeFeature() {
-    if(featureName == null) {
+    if (featureName == null) {
       print('Please provide a feature name');
       return;
     }
