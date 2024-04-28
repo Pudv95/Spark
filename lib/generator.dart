@@ -2,11 +2,11 @@ import 'dart:io';
 
 /// A class that generates the necessary folders for a project.
 class FolderGenerator {
-  final String libDirectory = 'lib';
-  final String assetsDirectory = 'assets';
+  String libDirectory;
+  String assetsDirectory;
 
   /// Constructs a [FolderGenerator] instance.
-  FolderGenerator();
+  FolderGenerator({this.libDirectory = 'lib', this.assetsDirectory = 'assets'});
 
   /// Generates the required folders.
   void generate() {
@@ -45,6 +45,17 @@ class FolderGenerator {
     if (!file.existsSync()) {
       file.writeAsStringSync(content);
       print('Created file: $parentDirectory/$fileNames');
+    }
+  }
+
+  static void writeInFile(
+      String content, String parentDirectory, String fileNames) {
+    final File file = File('$parentDirectory/$fileNames');
+    if (file.existsSync()) {
+      file.writeAsStringSync(content,mode: FileMode.writeOnlyAppend);
+      print('Updated file: $parentDirectory/$fileNames');
+    } else {
+      print('File not found: $parentDirectory/$fileNames');
     }
   }
 }
