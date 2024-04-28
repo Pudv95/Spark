@@ -31,16 +31,24 @@ Once the tool is installed, you can use it to create a Flutter app with a predef
 ### Creating a New Flutter App
 
 To create a new Flutter app with the predefined folder structure, run:
+```
+spark create myapp
+```
+![image](https://github.com/Pudv95/Spark/assets/84613655/731a6b82-dcca-4eaf-b0c1-fa239e10e1bc)
+
+This command will create the app with a predefined folder structure..!!
+
+### Creating folder structure in build app 
 
 ```
-Spark create
+spark init folders
 ```
-![image](https://github.com/Pudv95/Spark/assets/84613655/af49dedb-d02c-4ae5-bb6d-ce35a864269f)
+![image](https://github.com/Pudv95/Spark/assets/84613655/c522248e-6dcf-47b5-afcf-b627ad7f974a)
 
 
 This will create a basic folder structure for you app.
 
-![image](https://github.com/Pudv95/Spark/assets/84613655/a27cf3b3-8736-41e4-8428-eeadfdb06d36)
+![image](https://github.com/Pudv95/Spark/assets/84613655/41aeeadf-d66b-4a14-88e4-384e5ed4cc0b)
 
 
 ### Managing Assets
@@ -52,12 +60,12 @@ The tool provides commands to manage assets in your project.
 To create a class for all the Icons and Images in the assets directory, run:
 
 ```
-Spark getAssets
+spark init assets
 ```
 
 This command will generate a Dart class with constants for each asset folder.
 
-![image](https://github.com/Pudv95/Spark/assets/84613655/03a2389c-4806-4c82-9a41-d2864e5908ac)
+![image](https://github.com/Pudv95/Spark/assets/84613655/80a72d54-549a-4725-9f1e-2f4b8e63983d)
 
 #### Adding Assets
 
@@ -78,33 +86,32 @@ The tool provides commands to manage features in your project.
 To create folder structure for a new feature, run:
 
 ```
-Spark -f MyFeature
+spark -a MyFeature
 ```
 ##### OR
 ```
-Spark --addFeature MyFeature
+spark --add_feature MyFeature
 ```
 
 Replace `MyFeature` with the name of your new feature.
 
-![image](https://github.com/Pudv95/Spark/assets/84613655/b04cc288-7e3d-4109-bae6-a1e758223205)
-
+![image](https://github.com/Pudv95/Spark/assets/84613655/dcfb411c-4500-454d-9271-a9a9133b8962)
 
 ### Removing an Existing Feature
 
 To remove folder structure of an existing feature, run:
 
 ```
-Spark -r MyFeature
+spark -r MyFeature
 ```
 #### OR
 ```
-Spark --removeFeature MyFeature
+spark --remove_feature MyFeature
 ```
 
 Replace `MyFeature` with the name of the feature you want to remove.
 
-![image](https://github.com/Pudv95/Spark/assets/84613655/12596e86-2af4-4636-b3b5-706a1918aebf)
+![image](https://github.com/Pudv95/Spark/assets/84613655/30bf193e-e550-4347-84dc-200be4058215)
 
 
 ### Routing Management
@@ -116,7 +123,7 @@ The tool provides commands to manage routing in your project.
 To create files and folder structure for routing, run:
 
 ```
-Spark init_routes
+spark init routes
 ```
 
 ![image](https://github.com/Pudv95/Spark/assets/84613655/151959c4-8c3b-4204-8b5f-16bad5487e48)
@@ -124,7 +131,7 @@ Spark init_routes
 
 This command will create necessary files and folder structure for managing routing in your Flutter app.
 
-![image](https://github.com/Pudv95/Spark/assets/84613655/c5740307-2f3e-48a1-a446-8ce29595c777)
+![image](https://github.com/Pudv95/Spark/assets/84613655/199ca5ac-5c31-44d0-a97e-16a7f0f1a3c7)
 
 
 ## Contributing
