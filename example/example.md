@@ -1,5 +1,6 @@
 ## After few simple commands you flutter folder structure...!!!
 
+```
 my_flutter_app/
 │
 ├── assets/
@@ -26,3 +27,4 @@ my_flutter_app/
 │                          └── icons.dart
 │
 └──  pubspec.yaml
+```
