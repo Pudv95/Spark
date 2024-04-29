@@ -5,23 +5,10 @@ This tool helps you create a decent folder structure for your Flutter app and ma
 
 ## Installation
 
-1. Ensure you have [Dart SDK](https://dart.dev/get-dart) installed on your machine.
-2. Clone this repository to your local machine:
+Ensure you have [Dart SDK](https://dart.dev/get-dart) installed on your machine. then run the following command.
 
 ```
-git clone https://github.com/pudv95/Spark.git
-```
-
-3. Navigate to the project directory:
-
-```
-cd Spark
-```
-
-4. Run the following command to install the tool:
-
-```
-dart pub global activate --source path ./
+dart pub global activate flutter_spark
 ```
 
 ## Usage
