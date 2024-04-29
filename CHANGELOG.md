@@ -1,3 +1,6 @@
+# 1.0.3
+- Add example of the proper folder structure that can be achieved using spark. 
+
 # 1.0.2
 - Add proper repository and update readme
 
