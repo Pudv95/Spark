@@ -1,3 +1,6 @@
+# 1.0.4
+- Update the formatting of the example.md
+
 # 1.0.3
 - Add example of the proper folder structure that can be achieved using spark. 
 
