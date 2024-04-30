@@ -54,13 +54,25 @@ class My$className {
 
   /// Parses the name of the asset file to a valid Dart variable name.
   String parseName(String name) {
+    // Check if the name is empty
+    if (name.isEmpty) {
+      return 'unNamed';
+    }
+    // Remove special characters and split the name into words
     List<String> words =
         name.replaceAll(RegExp(r'[^a-zA-Z0-9\s]'), '').split(RegExp(r'[_\s]'));
+    print(words);
+    // Check if the name contains only numbers
+    if (words.every((word) => int.tryParse(word) != null)) {
+      return 'unKnown';
+    }
+    // Capitalize the first letter of each word
     String result = words[0].toLowerCase();
     for (int i = 1; i < words.length; i++) {
-      result += words[i][0].toUpperCase() + words[i].substring(1);
+      if (words[i].isNotEmpty) {
+        result += words[i][0].toUpperCase() + words[i].substring(1);
+      }
     }
-    print(result);
     return result;
   }
 }
